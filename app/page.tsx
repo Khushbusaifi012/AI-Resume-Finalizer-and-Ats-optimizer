@@ -11,6 +11,7 @@ import WaveDivider from "@/components/WaveDivider";
 import EmptyState from "@/components/EmptyState";
 import ResultsPanel from "@/components/ResultsPanel";
 import ResultsSkeleton from "@/components/ResultsSkeleton";
+import AlertToast from "@/components/AlertToast";
 import type { AnalyzeResult } from "@/lib/types";
 
 type Step = "upload" | "results";
@@ -22,11 +23,12 @@ export default function HomePage() {
   const [step, setStep] = useState<Step>("upload");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [toast, setToast] = useState<string | null>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
 
   async function handleAnalyze() {
     if (!file) {
-      setError("Please upload a resume first.");
+      setToast("Please upload your resume first before analyzing.");
       return;
     }
 
@@ -68,6 +70,8 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen pb-20">
+      {toast && <AlertToast message={toast} onClose={() => setToast(null)} />}
+
       <header className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-brand-950 pb-12 text-white sm:pb-16 lg:pb-20">
         <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-brand-500/20 blur-3xl" />
         <div className="pointer-events-none absolute -right-16 top-10 h-48 w-48 rounded-full bg-indigo-500/15 blur-3xl" />
@@ -154,7 +158,7 @@ export default function HomePage() {
             />
             <button
               onClick={handleAnalyze}
-              disabled={loading || !file}
+              disabled={loading}
               className="btn-primary"
             >
               {loading ? (

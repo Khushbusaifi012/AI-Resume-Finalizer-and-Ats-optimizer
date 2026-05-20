@@ -98,6 +98,21 @@
   .animate-in-delay-3 {
     animation-delay: 0.24s;
   }
+
+  .toast-pop {
+    animation: toastPop 0.35s ease-out both;
+  }
+}
+
+@keyframes toastPop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -12px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 @keyframes fadeSlideIn {
