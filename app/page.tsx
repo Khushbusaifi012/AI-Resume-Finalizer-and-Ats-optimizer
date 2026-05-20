@@ -169,30 +169,8 @@ export default function HomePage() {
         </div>
       </div>
 
-      <footer className="mx-auto max-w-5xl border-t border-slate-200/80 px-4 py-8 dark:border-slate-800">
-        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <p className="text-xs text-slate-400 dark:text-slate-600">
-            Resume Finalizer · ATS scoring for job seekers
-          </p>
-          <div className="flex gap-4 text-xs">
-            <a
-              href="https://ai-resume-finalizer-and-ats-optimiz.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-brand-600 hover:underline dark:text-brand-400"
-            >
-              Live demo
-            </a>
-            <a
-              href="https://github.com/Khushbusaifi012/AI-Resume-Finalizer-and-Ats-optimizer"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-700 hover:underline dark:text-slate-400 dark:hover:text-slate-300"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
+      <footer className="mx-auto max-w-5xl px-4 py-8 text-center text-xs text-slate-400 dark:text-slate-600">
+        Resume Finalizer · ATS scoring for job seekers
       </footer>
     </main>
   );
