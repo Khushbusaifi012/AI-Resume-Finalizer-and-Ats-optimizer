@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-100 text-slate-900 antialiased transition-colors duration-300;
+    background-image:
+      radial-gradient(at 0% 0%, rgb(219 234 254 / 0.45) 0, transparent 50%),
+      radial-gradient(at 100% 0%, rgb(224 231 255 / 0.35) 0, transparent 45%);
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+    background-image:
+      radial-gradient(at 0% 0%, rgb(37 99 235 / 0.15) 0, transparent 50%),
+      radial-gradient(at 100% 100%, rgb(99 102 241 / 0.1) 0, transparent 45%);
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm shadow-slate-200/50 backdrop-blur-sm transition-all duration-300 dark:border-slate-700/60 dark:bg-slate-900/90 dark:shadow-black/30;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-0.5 hover:shadow-md hover:shadow-slate-300/40 dark:hover:shadow-black/40;
+  }
+
+  .card-accent {
+    @apply border-brand-200/60 bg-gradient-to-br from-white to-brand-50/30;
+  }
+
+  .dark .card-accent {
+    border-color: rgb(30 58 138 / 0.4);
+    background-image: linear-gradient(to bottom right, rgb(15 23 42), rgb(23 37 84 / 0.25));
+  }
+
+  .btn-primary {
+    @apply inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-600 to-brand-700 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-600/25 transition hover:from-brand-700 hover:to-brand-800 hover:shadow-xl hover:shadow-brand-600/30 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:active:scale-100;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 active:scale-[0.98] dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:border-slate-500 dark:hover:bg-slate-700;
+  }
+
+  .section-title {
+    @apply text-base font-semibold text-slate-900 dark:text-slate-100;
+  }
+
+  .section-subtitle {
+    @apply mt-1 text-sm text-slate-500 dark:text-slate-400;
+  }
+
+  .step-badge {
+    @apply inline-flex h-7 w-7 items-center justify-center rounded-lg bg-brand-100 text-xs font-bold text-brand-700;
+  }
+
+  .dark .step-badge {
+    background-color: rgb(23 37 84);
+    color: rgb(147 197 253);
+  }
+
+  .stat-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-slate-200/80 bg-white/80 px-3 py-1 text-xs font-medium text-slate-600 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-300;
+  }
+
+  .keyword-tag-match {
+    @apply rounded-full border border-emerald-200/80 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-300;
+  }
+
+  .keyword-tag-miss {
+    @apply rounded-full border border-red-200/80 bg-red-50 px-3 py-1 text-xs font-medium text-red-700 dark:border-red-800 dark:bg-red-950/50 dark:text-red-300;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: fadeSlideIn 0.45s ease-out both;
+  }
+
+  .animate-in-delay-1 {
+    animation-delay: 0.08s;
+  }
+
+  .animate-in-delay-2 {
+    animation-delay: 0.16s;
+  }
+
+  .animate-in-delay-3 {
+    animation-delay: 0.24s;
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
