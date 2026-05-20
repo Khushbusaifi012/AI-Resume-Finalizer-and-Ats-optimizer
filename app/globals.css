@@ -20,7 +20,7 @@
 
 @layer components {
   .card {
-    @apply rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm shadow-slate-200/50 backdrop-blur-sm transition-all duration-300 dark:border-slate-700/60 dark:bg-slate-900/90 dark:shadow-black/30;
+    @apply rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-sm shadow-slate-200/50 backdrop-blur-sm transition-all duration-300 dark:border-slate-700/60 dark:bg-slate-900/90 dark:shadow-black/30;
   }
 
   .card-hover {
