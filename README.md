@@ -19,19 +19,13 @@ Upload a resume (PDF or DOCX), get an ATS compatibility score, and optimize your
    npm install
    ```
 
-3. Copy `.env.example` to `.env` and add your OpenAI API key:
-
-   ```bash
-   OPENAI_API_KEY=sk-proj-your-key-here
-   ```
-
-4. Run the dev server:
+3. Run the dev server:
 
    ```bash
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000)
+4. Open [http://localhost:3000](http://localhost:3000)
 
 ## Usage
 
@@ -39,12 +33,6 @@ Upload a resume (PDF or DOCX), get an ATS compatibility score, and optimize your
 2. Optionally paste a job description for keyword matching
 3. Click **Analyze ATS Score**
 4. Review scores, issues, and missing keywords
-5. Click **Optimize with AI** for suggested improvements
-
-## Security
-
-- Never commit your `.env` file or API keys to Git
-- If your key is exposed, revoke it at [platform.openai.com/api-keys](https://platform.openai.com/api-keys) and create a new one
 
 ## Tech stack
 
