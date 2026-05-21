@@ -102,6 +102,15 @@
   .toast-pop {
     animation: toastPop 0.35s ease-out both;
   }
+
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @keyframes toastPop {

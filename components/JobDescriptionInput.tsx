@@ -28,7 +28,7 @@ export default function JobDescriptionInput({
         disabled={disabled}
         rows={6}
         placeholder="e.g. We are looking for a Software Engineer with experience in React, Node.js, and cloud platforms..."
-        className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 transition focus:border-brand-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 disabled:opacity-50 dark:border-slate-600 dark:bg-slate-800/50 dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-brand-500 dark:focus:bg-slate-800"
+        className="scrollbar-hide w-full resize-none rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-slate-800 placeholder:text-slate-400 transition focus:border-brand-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20 disabled:opacity-50 dark:border-slate-600 dark:bg-slate-800/50 dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-brand-500 dark:focus:bg-slate-800"
       />
       {value.length > 0 && (
         <p className="mt-2 text-xs text-slate-400">{value.length} characters</p>
